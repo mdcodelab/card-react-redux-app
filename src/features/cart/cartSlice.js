@@ -35,13 +35,23 @@ decreaseItem: (state, {payload}) => {
     cartItem.amount = 0;
     state.cartItems = state.cartItems.filter(items => items.id !== payload.id)
   }
+},
+calculateTotal: (state, action) => {
+  let amount=0;
+  let total=0;
+state.cartItems.forEach(item => {
+amount=amount+item.amount;
+total=total+item.amount*item.price;
+})
+state.amount=amount;
+state.total=total;
 }
 }
 
 })
 
 //console.log(cartSlice);
-export const {clearCart, removeItem, increaseItem, decreaseItem}=cartSlice.actions;
+export const {clearCart, removeItem, increaseItem, decreaseItem, calculateTotal}=cartSlice.actions;
 
 export const{ actions, reducer } = cartSlice;//
 
