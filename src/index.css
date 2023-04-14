@@ -181,7 +181,8 @@ Cart
 .empty-cart {
   text-transform: lowercase;
   color: var(--clr-grey-5);
-  margin-top: 1rem;
+  margin: 1rem auto;
+  text-align: center;
   text-align: center;
 }
 .cart footer {
