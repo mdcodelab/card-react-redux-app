@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { openModal } from '../modal/modalSlice';
-import cartItems from "../../cartItems";
+//import cartItems from "../../cartItems";
 
 const url = 'https://course-api.com/react-useReducer-cart-project';
 
@@ -10,7 +10,7 @@ export const getCartItems=createAsyncThunk("cart/getCartItems", ()=> {
 })
 
 const initialState= {
-  cartItems: cartItems,
+  cartItems: [],
   amount: 4, //items of that specific product
   total: 0,
   isLoading: true

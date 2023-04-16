@@ -19,7 +19,7 @@ dispatch(getCartItems())
   }, [])
 
   if(isLoading) {
-    return <div className="loadning">
+    return <div className="loading">
       <h1>Loading...</h1>
     </div>
   }
